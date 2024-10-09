@@ -541,6 +541,9 @@ public class GoClientCodegen extends AbstractGoCodegen {
     }
 
     private String constructExampleCode(CodegenProperty codegenProperty, HashMap<String, CodegenModel> modelMaps, HashMap<String, Integer> processedModelMap) {
+        if (codegenProperty == null) {
+            return "\"TODO\"";
+        }
         if (codegenProperty.isArray) { // array
             String prefix = codegenProperty.dataType;
             String dataType = StringUtils.removeStart(codegenProperty.dataType, "[]");
