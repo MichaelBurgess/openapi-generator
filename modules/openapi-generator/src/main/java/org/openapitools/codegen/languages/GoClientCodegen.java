@@ -476,7 +476,7 @@ public class GoClientCodegen extends AbstractGoCodegen {
     }
 
     private String constructExampleCode(CodegenParameter codegenParameter, HashMap<String, CodegenModel> modelMaps, HashMap<String, Integer> processedModelMap) {
-        if (codegenProperty == null) {
+        if (codegenParameter == null) {
             return "\"TODO\"";
         }
         if (codegenParameter.isArray) { // array
